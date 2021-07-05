@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS + CSS Clock</title>
+</head>
+<body>
+    
+    <div class="clock">
+        <div class="clock-face">
+            <div class="hand hour-hand"></div>
+            <div class="hand min-hand"></div>
+            <div class="hand second-hand"></div>
+        </div>
+    </div>
+
+    <style>
+        html {
+            background-color : #018DED;
+            background-image: url(https://unsplash.it/1500/1000?image=881&blur=5);
+            background-size : cover;
+            font-family: "helvetica neue";
+            text-align : center;
+            font-size : 10px;
+        }
+
+        body {
+            margin : 0;
+            font-size : 2rem;
+            display : flex;
+            flex : 1;
+            min-height : 100vh;
+            align-items: center;
+        }
+
+        .clock {
+            width : 30rem;
+            height : 30rem;
+            border : 20px solid white;
+            border-radius : 50%;
+            margin : 50px auto;
+            position : relative;
+            padding : 2rem;
+            box-shadow : 0 0 0 4px rgba(0,0,0,0.1),
+            inset 0 0 0 3px #EFEFEF,
+            inset 0 0 10px black,
+            0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .clock-face {
+            position : relative;
+            width : 100%;
+            height : 100%;
+            transform: translateY(-3px);    /*시계 바늘의 높이*/ 
+        }
+
+        .hand {
+            width : 50%;
+            height: 6px;
+            background : black;
+            position : absolute;
+            top : 50%;
+            transform-origin : 100%;
+            transform : rotate(90deg);
+            transition : all 0.05s;
+            transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+        }
+    </style>
+
+    <script>
+        // < 처음 내 코드 >
+        // const today = new Date();
+        // const todayHour = today.getHours();
+        // const todayMin = today.getMinutes();
+        // const todaySecond = today.getSeconds();
+        // let addTime = 0
+        // setInterval(() => {
+        //     addTime += 1
+        //     const testSecond = document.querySelector(".second-hand").style.transform = `rotate(calc(90deg + ${6 * ((todaySecond + addTime) % 60)}deg))`;
+        //     const testMin = document.querySelector(".min-hand").style.transform = `rotate(calc(90deg + ${0.1 * ((todayMin*60 + addTime) % 3600)}deg))`;
+        //     const testHour = document.querySelector(".hour-hand").style.transform = `rotate(calc(90deg + ${(1/120) * ((todayHour*3600 + addTime) % 43200)}deg))`;
+        // },1000)
+        
+        // < 개선 한 내 코드 >
+        // 렌더링 시, 한번만 가져오면 되는 것
+        const secondHand = document.querySelector(".second-hand");
+        const minHand = document.querySelector(".min-hand");
+        const hourHand = document.querySelector(".hour-hand");
+        
+        // 렌더링 시점에서, 현재 시간 가져오기
+        function setDate() {
+            const now = new Date();
+            
+            const todaySecond = now.getSeconds();
+            const secondDegrees = ((todaySecond / 60) * 360) + 90;
+            secondHand.style.transform = `rotate(${secondDegrees}deg)`;
+            
+            const todayMin = now.getMinutes();
+            const minDegrees = ((todayMin / 60) * 360) + ((todaySecond / 60) * 6) + 90;
+            minHand.style.transform = `rotate(${minDegrees}deg)`;
+            
+            const todayHour = now.getHours();
+            const hourDegrees = ((todayHour / 12) * 360) + ((todayMin / 60) * 30) + 90;
+            hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+        }
+        // 매 초마다 시계 업데이트
+        setInterval(setDate,1000);
+        // setIntervel 전에 맨 처음 setDate 실행 필요 (1초 딜레이 방지)
+        setDate();
+
+        // < Wes bos 형 코드 >
+        // const secondHand = document.querySelector('.second-hand');
+        // const minsHand = document.querySelector('.min-hand');
+        // const hourHand = document.querySelector('.hour-hand');
+
+        // function setDate() {
+        //     const now = new Date();
+
+        //     const seconds = now.getSeconds();
+        //     const secondsDegrees = ((seconds / 60) * 360) + 90;
+        //     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+        //     const mins = now.getMinutes();
+        //     const minsDegrees = ((mins / 60) * 360) + ((seconds / 60) * 6) + 90;
+        //     minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+        //     const hour = now.getHours();
+        //     const hourDegrees = ((hour / 12) * 360) + ((mins / 60) * 30) + 90;
+        //     hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+        // }
+
+        // setInterval(setDate, 1000);
+
+        // setDate();
+    </script>
+
+
+</body>
+</html>
