@@ -95,6 +95,11 @@
 
 **알게된 것**
 
+- 정규표현식(regex), RegExp() 인스턴스
+
+  - g, i 옵션
+  - match, replace 메소드
+
 **소스코드 & 구현노트**
 
 - 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/06%20-%20Type%20Ahead/My-Index.html)
