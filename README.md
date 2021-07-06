@@ -88,3 +88,16 @@
 
 - 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/05%20-%20Flex%20Panel%20Gallery/My-Index.html)
 - 구현노트 : [Click To View](https://www.notion.so/Felx-Panel-Gallery-8d6e84c9f0dc4563b1172a283724c53d)
+
+---
+
+#### 🔴Day 6 - Type Ahead
+
+**알게된 것**
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/06%20-%20Type%20Ahead/My-Index.html)
+- 구현노트 : [Click To View](https://www.notion.so/Type-Ahead-7eca7a9e1b244895968c5a7e2ccd8ff8)
+
+---
