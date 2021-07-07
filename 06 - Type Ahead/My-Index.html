@@ -29,6 +29,7 @@
             // 사용자의 입력의 따른 regex 처리가 필요할 때, 이렇게 인스턴스 형태로 사용하라고 한다.
             // g = 전체, i = 대소문자 구분 X
             // match() 는 regex 와 보통 같이 쓴다. regex 에 해당하는 것들을 찾아 배열형태로 반환, 없으면 null
+            // 각 place 의 city 또는 state 에, 해당 wordToMatch 검색열에 해당하는 부분이 한 곳이라도 있다면, true 반환하므로써, filter 에 해당 place 가 걸러짐
             const regex = new RegExp(wordToMatch, 'gi');
             return place.city.match(regex) || place.state.match(regex)
         });
