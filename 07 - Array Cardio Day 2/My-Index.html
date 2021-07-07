@@ -50,7 +50,7 @@
         console.log("업데이트 :", people);
         
         // Array.prototype.slice(시작인덱스, 끝 인덱스)
-        // ... = sp
+        // ... = 스프레드 연산자
         const newPeople = [
             ...people.slice(0, foundIdx),
             ...people.slice(foundIdx+1)

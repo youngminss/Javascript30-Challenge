@@ -106,3 +106,21 @@
 - 구현노트 : [Click To View](https://www.notion.so/Type-Ahead-7eca7a9e1b244895968c5a7e2ccd8ff8)
 
 ---
+
+#### 🔴Day 7 - Array Cardio 2
+
+**알게된 것**
+
+- JS, Array.prototype.some()
+- JS, Array.prototype.every()
+- JS, Array.prototype.find()
+- JS, Array.prototype.findIndex()
+- JS, Array.prototype.splice()
+- JS, Array.prototype.slice()
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/07%20-%20Array%20Cardio%20Day%202/My-Index.html)
+- 구현노트 : [Click To View](https://www.notion.so/Array-Cardio-2-c9132d5c4aa2433fafb7630e3677b7a7)
+
+---
