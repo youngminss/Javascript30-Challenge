@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Canvas</title>
+</head>
+<body>
+    <canvas id="draw" width="800" height="800"></canvas>
+    <script>
+        let isTrue = false;
+        let ctx,cty, redius = 100, maxR = 50, minR = 0, radius = 50, radiusDir, colors = [255,0,0];
+        const myCanvas = document.getElementById("draw");
+        const context_canvas = myCanvas.getContext("2d");
+
+        function colorHandler() {
+            if(colors[1] === 0 && colors[2] === 255 && colors[0] < 255) {
+                // R 오름
+                colors[0] += 1;
+            } else if(colors[1] === 255 && colors[2] === 0 && colors[0] > 0) {
+                // R 내림
+                colors[0] -= 1;
+            } else if (colors[0] === 255 && colors[2] === 0) {
+                // G 오름
+                colors[1] += 1;
+            } else if (colors[0] === 0 && colors[2] === 255) {
+                // G 내림
+                colors[1] -= 1;
+            } else if (colors[0] === 0 && colors[1] === 255) {
+                // B 오름
+                colors[2] += 1;
+            } else if (colors[0] === 255 && colors[1] === 0) {
+                // B 내림
+                colors[2] -= 1;
+            }
+            // console.log(colors);
+        }
+       
+        function draw(event) {
+            if(!isTrue) return false;
+            
+            if(radius === maxR) { radiusDir = false };
+            if(radius === minR) { radiusDir = true };
+            radiusDir === false ? radius -= 0.5 : radius += 0.5;
+            
+            colorHandler();
+            context_canvas.beginPath();
+            ctx = event.offsetX;
+            cty = event.offsetY;
+        
+            context_canvas.arc(ctx,cty,radius,0,2 * Math.PI, true);
+            context_canvas.fillStyle = `rgb(${colors[0]},${colors[1]},${colors[2]})`;
+            context_canvas.fill();
+        }
+
+
+        myCanvas.addEventListener('mousedown', () => isTrue = true);
+        myCanvas.addEventListener('mouseup', () => isTrue = false );
+        myCanvas.addEventListener('mouseout', () => isTrue = false);
+        myCanvas.addEventListener('mousemove', draw);
+        
+
+        // < Wes Bos 형 코드 >
+        // const canvas = document.querySelector('#draw');
+        // const ctx = canvas.getContext('2d');
+        // canvas.width = window.innerWidth;
+        // canvas.height = window.innerHeight;
+        // ctx.strokeStyle = '#BADA55';
+        // ctx.lineJoin = 'round';
+        // ctx.lineCap = 'round';
+        // ctx.lineWidth = 100;
+        // // ctx.globalCompositeOperation = 'multiply';
+
+        // let isDrawing = false;
+        // let lastX = 0;
+        // let lastY = 0;
+        // let hue = 0;
+        // let direction = true;
+
+        // function draw(e) {
+        //     if (!isDrawing) return; // stop the fn from running when they are not moused down
+        //     console.log(e);
+        //     ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+        //     ctx.beginPath();
+        //     // start from
+        //     ctx.moveTo(lastX, lastY);
+        //     // go to
+        //     ctx.lineTo(e.offsetX, e.offsetY);
+        //     ctx.stroke();
+        //     [lastX, lastY] = [e.offsetX, e.offsetY];
+
+        //     hue++;
+        //     if (hue >= 360) {
+        //         hue = 0;
+        //     }
+        //     if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+        //         direction = !direction;
+        //     }
+
+        //     if (direction) {
+        //         ctx.lineWidth++;
+        //     } else {
+        //         ctx.lineWidth--;
+        //     }
+
+        // }
+
+        // canvas.addEventListener('mousedown', (e) => {
+        //     isDrawing = true;
+        //     [lastX, lastY] = [e.offsetX, e.offsetY];
+        // });
+
+
+        // canvas.addEventListener('mousemove', draw);
+        // canvas.addEventListener('mouseup', () => isDrawing = false);
+        // canvas.addEventListener('mouseout', () => isDrawing = false);
+    </script>
+
+    <style>
+        html, body {
+            margin : 0;
+        }
+    </style>
+</body>
+</html>
