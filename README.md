@@ -124,3 +124,18 @@
 - 구현노트 : [Click To View](https://www.notion.so/Array-Cardio-2-c9132d5c4aa2433fafb7630e3677b7a7)
 
 ---
+
+#### 🔴Day 8 - Fun HTML5 Canvas
+
+**알게된 것**
+
+- HTML, HTML5 Canvas, 컬러모델
+- DOM, Mouse Events
+- JS, 이벤트 여러 중단법(강제종료)
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/08%20-%20Fun%20with%20HTML5%20Canvas/My-Index.html)
+- 구현노트 : [Click To View](https://www.notion.so/Fun-With-HTML5-Canvas-0a475c20582143528876d15850b9caa8)
+
+---
