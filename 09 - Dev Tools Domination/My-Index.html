@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <title>Console Tricks!</title>
+</head>
+<body>
+
+    <p onClick="makeGreen()">xBREAKxDOWNx</p>
+
+    <script>
+        const dogs = [{ name : "Snickers", age : 2 }, { name : 'hugo', age : 8 } ];
+
+        function makeGreen() {
+            const p = document.querySelector('p');
+            p.style.color = "#BADA55";
+            p.style.fontSize = "50px";
+        }
+
+        // Regular
+        console.log("Hello JS");
+
+        // Interpolated
+        console.log("Hello JS %s string", '👨‍🦲');
+        
+        // Styled
+        console.log("%c I am some great text", 'font-size:50px; color:red; background-color:yellow;')
+
+        // warning!
+        console.warn("Fuck Shit !!");
+
+        // Error :|
+        console.error("Fuck Shit !!");
+        1
+        // Info
+        console.info("Hmm..Thanks...");
+
+        // Testing ( assert )
+        // 앞에 결과가 false 일 경우, 뒤에 error 메시지를 반환
+        const p = document.querySelector('p');
+
+        console.assert(p.classList.contains('ouch'), "That's wrong !")
+
+        // clearing
+        // 이전 콘솔 내용 clear 해준다.
+        // console.clear();
+
+        // Viewing DOM Elements
+        // dir = 요소의 내부 프로퍼티를 모두 HTMLParagraphElement 형태로 보여준다.
+        console.log(p);
+        console.dir(p);
+
+        // Grouping together
+        // groupCollapesd ~ groupEnd 로 사이에 작업을 그루핑해서 콘솔에서 볼 수 있다.
+        dogs.forEach(dog => {
+            console.groupCollapsed(`${dog.name}`);
+            console.log(`This is ${dog.name}`);
+            console.log(`${dog.name} is ${dog.age} years old`);
+            console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+            console.groupEnd(`${dog.name}`);
+        })
+
+        // counting
+        // 내가 해당 string 을 이전까지 몇번 사용했나 반환
+        console.count('young');
+        console.count('min');
+        console.count('young');
+        console.count('min');
+        console.count('young');
+        console.count('young');
+        console.count('young');
+        console.count('min');
+        console.count('young');
+        console.count('young');
+        console.count('young');
+        console.count('min');
+        console.count('young');
+        console.count('min');
+        
+        // timing
+        // 특정 작업이 걸리는 시간, 콘솔에서 확인하고 싶을 때 사용
+        // 작업 사이에, 동일한 이름으로 console.time("작업이름") ~ console.timeEnd("작업이름");
+        console.time('fetching data');
+        fetch('https://api.github.com/users/youngminss')
+            .then(data => data.json())
+            .then(data => {
+                console.timeEnd('fetching data');
+                console.log(data);
+            })
+        
+        // table
+        // 해당 데이터를 테이블 형태로 깔끔하게 볼 수 있다.
+        console.table(dogs);
+    
+
+    </script>
+</body>
+</html>
