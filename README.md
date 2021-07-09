@@ -139,3 +139,25 @@
 - 구현노트 : [Click To View](https://www.notion.so/Fun-With-HTML5-Canvas-0a475c20582143528876d15850b9caa8)
 
 ---
+
+#### 🔴Day 9 - Must Know Dev Tools In Console
+
+**알게된 것**
+
+- CSS in console.log()
+- console.warn()
+- console.error()
+- console.info()
+- console.assert()
+- console.dir()
+- console.groupCollapsed() ~ console.groupEnd()
+- console.count()
+- console.time() ~ - console.timeEnd()
+- console.table()
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/09%20-%20Dev%20Tools%20Domination/My-Index.html)
+- 구현노트 : [Click To View](https://www.notion.so/Must-Know-Dev-Tools-Tricks-Console-92d2cc03803d492b809abe3d11fd5795)
+
+---
