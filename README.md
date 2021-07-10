@@ -161,3 +161,21 @@
 - 구현노트 : [Click To View](https://www.notion.so/Must-Know-Dev-Tools-Tricks-Console-92d2cc03803d492b809abe3d11fd5795)
 
 ---
+
+#### 🔴Day 10 - Hold Shift and Checkbox Multiple Checkboxes
+
+**알게된 것**
+
+- DOM, shift 키 이벤트
+- CSS, 인접 형제 결합자
+- CSS, text-decoration : line-through
+- CSS, 속성 선택자
+- JS, this 똑똑하게 쓰기
+- JS, not 연산자로 boolean toggle 잘 사용하기
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/My-Index.html)
+- 구현노트 : [Click To View](https://www.notion.so/Hold-Shift-and-Checkbox-Multiple-Checkboxes-d5c61fab26354a75aa580d2236aae1e3)
+
+---
