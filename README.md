@@ -179,3 +179,18 @@
 - 구현노트 : [Click To View](https://www.notion.so/Hold-Shift-and-Checkbox-Multiple-Checkboxes-d5c61fab26354a75aa580d2236aae1e3)
 
 ---
+
+#### 🔴Day 11 - Custom Video Player
+
+**알게된 것**
+
+- DOM, innerHTML, innerText, textContent 차이점
+- HTML5, video Element
+- JS, input, onchange 이벤트 차이
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/11%20-%20Custom%20Video%20Player/My-Script.js)
+- 구현노트 : [Click To View](https://www.notion.so/Custom-Video-Player-e3c849c8ca814dc6b84914cbf5f01393)
+
+---
