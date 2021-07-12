@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Key Detection</title>
+	<script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+<script>
+	// < 내 코드 >
+	let arr = new Array()
+	const screatCode = "youngm"
+	window.addEventListener("keydown",(e) => {
+		const key = e.key;
+		if(arr.length < 6) {
+			arr.push(key);
+		} else {
+			arr.shift();
+			arr.push(key);
+		}
+		if(pressed.join('').includes(screatCode)) {
+			cornify_add();
+		}
+		console.log(key);
+		console.log(arr);
+	})
+
+	// < wes 형 코드 >
+	// secretCode = 정답 시크릿코드였다.
+	// 삭제 및 업데이트를 Array.prototyple.splice() 를 사용했다.
+	// cornify_add() = 귀여운(?) 이미지들을 화면에 뿌려준다.
+	// const pressed = [];
+	// const secretCode = 'wesbos';
+	// window.addEventListener('keyup', (e) => {
+	// 	console.log(e.key);
+	// 	pressed.push(e.key);
+	// 	pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+	// 	if (pressed.join('').includes(secretCode)) {
+	// 		console.log('DING DING!');
+	// 		cornify_add();
+	// 	}
+	// 	console.log(pressed);
+	// });
+
+</script>
+</body>
+</html>
