@@ -194,3 +194,16 @@
 - 구현노트 : [Click To View](https://www.notion.so/Custom-Video-Player-e3c849c8ca814dc6b84914cbf5f01393)
 
 ---
+
+#### 🔴Day 12 - Key Sequence Detection
+
+**알게된 것**
+
+- DOM, Key Event
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/12%20-%20Key%20Sequence%20Detection/My-Index.html)
+- 구현노트 : [Click To View](https://www.notion.so/Key-Sequence-Detection-d7c1a9905d1949fdb3cb34048b3ac290)
+
+---
