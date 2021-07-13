@@ -207,3 +207,18 @@
 - 구현노트 : [Click To View](https://www.notion.so/Key-Sequence-Detection-d7c1a9905d1949fdb3cb34048b3ac290)
 
 ---
+
+#### 🔴Day 13 - Slide In On Scroll
+
+**알게된 것**
+
+- 뷰포트
+- getBoundingClientRect()
+- debounce, throttle
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/13%20-%20Slide%20in%20on%20Scroll/My-Index.html)
+- 구현노트 : [Click To View](https://www.notion.so/Slide-In-On-Scroll-0ddced3e86554dbdae222b56a71588ad)
+
+---
