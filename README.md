@@ -222,3 +222,25 @@
 - 구현노트 : [Click To View](https://www.notion.so/Slide-In-On-Scroll-0ddced3e86554dbdae222b56a71588ad)
 
 ---
+
+#### 🔴Day 14 - JS Reference VS Copying
+
+**알게된 것**
+
+- JS 완전한 복사
+- 배열
+  - Array.slice()
+  - [].concat(기존배열)
+  - Array.from(기존배열)
+  - spread 연산자 (ES6+)
+- 오브젝트
+  - Object.assign({}, 기존배열, { 할당할 프로퍼티s });
+  - spread 연산자 (ES6+)
+  - JSON.parse(JSON.stringify(기존오브젝트))
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/14%20-%20JavaScript%20References%20VS%20Copying/My-Index.html)
+- 구현노트 : [Click To View](https://www.notion.so/Javascript-Reference-VS-Copy-c87ae8ed7da943d2adb9a84e00309ce6)
+
+---
