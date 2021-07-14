@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Reference VS Copy</title>
+</head>
+<body>
+	<script>
+		// start with strings, numbers and booleans
+		// 값이 독립적으로 변경가능하다.
+		let age = 100;
+		let age2 = age;
+		console.log(age, age2);
+		age = 200;
+		console.log(age, age2);
+
+		let name = "young";
+		let name2 = name;
+		console.log(name, name2);
+		name = "min";
+		console.log(name, name2);
+
+		// Let's say we have an array
+		const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+
+		// and we want to make a copy of it.
+		const team = players;
+
+		console.log(players, team);
+		// You might think we can just do something like this:
+		team[3] = "Lux";
+		console.log(players, team);
+		
+		// however what happens when we update that array?
+		// now here is the problem!
+		// oh no - we have edited the original array too!
+		// Why? It's because that is an array reference, not an array copy. They both point to the same array!
+		// 배열은 독립된 값 변경이 이뤄지지 않는다.
+		// 이건 완벽한 복사가 아니다. 주소의 공유다.
+		// ["Wes", "Sarah", "Ryan", "Lux"]
+		// ["Wes", "Sarah", "Ryan", "Lux"]
+		
+		// So, how do we fix this? We take a copy instead!
+		// one way
+		const team2 = players.slice();
+		// or create a new array and concat the old one in
+		const team3 = [].concat(players);
+		// or use the new ES6 Spread
+		const team4 = [...players];
+		// now when we update it, the original one isn't changed
+		team4[3] = "heeee haww";
+		console.log(team, team4)
+		// 위에 완벽한 복사 방법들 중, spread 연산자 결과에 값을 업데이트
+		// 기존에 오리지널 배열과 독립된 결과를 보존한다.
+		// ["Wes", "Sarah", "Ryan", "Lux"]
+		// ["Wes", "Sarah", "Ryan", "heeee haww"]
+
+		// or use Array.from()
+		const team5 = Array.from(players);
+		team5[3] = "heeee haww";
+		console.log(team, team5)
+
+		// The same thing goes for objects, let's say we have a person object
+		// with Objects
+		const person = {
+			name: 'Wes Bos',
+			age: 80
+		};
+
+		// and think we make a copy:
+		const man = person;
+		man.number = 99;
+		console.log(person, man);
+		// 단순한 대입 복사는 완벽한 복사가 아니다.
+		// 배열과 마찬가지로 같은 주소를 참조하는 개념이다.
+		// { name: "Wes Bos", age: 80, number: 99 }
+		// { name: "Wes Bos", age: 80, number: 99 }
+
+		// how do we take a copy instead?
+		// We will hopefully soon see the object ...spread
+		const man2 = {...person};
+		man2.number = 101;
+		console.log(person,man2);
+		// object 역시 spread 연산을 통해 완벽한 복사가 가능하다.
+		// { name: "Wes Bos", age: 80, number: 99 }
+		// { name: "Wes Bos", age: 80, number: 101 }
+		
+		// or use Object.assign({}, 복사할 object, { 프로퍼티들 });
+		const man3 = Object.assign({}, person, { number : 102, age : 27 });
+		console.log(person, man3);
+		// { name: "Wes Bos", age: 80, number: 99 }
+		// { name: "Wes Bos", age: 27, number: 102 }
+
+		// Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+		// 오브젝트 하나 선언
+		const young = {
+			name : "young",
+			age : 27,
+			social : {
+				facebook : "@young",
+				instagram : "@young.develper"
+			}
+		};
+
+		console.log(young);
+		const dev = Object.assign({}, young);
+		const dev2 = JSON.parse(JSON.stringify(young));
+		console.log(dev,dev2);
+	</script>
+</body>
+</html>
