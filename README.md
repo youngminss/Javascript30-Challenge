@@ -244,3 +244,20 @@
 - 구현노트 : [Click To View](https://www.notion.so/Javascript-Reference-VS-Copy-c87ae8ed7da943d2adb9a84e00309ce6)
 
 ---
+
+#### 🔴Day 15 - LocalStorage
+
+**알게된 것**
+
+- HTML, Form 초기화
+  - HTMLFormElement.reset()
+- HTML, checkbox 체크여부 컨트롤
+- JS, localStorage 주의점
+  - Object, Array 의 경우, set -> 직렬화 & get -> 역직렬화 필요
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/15%20-%20LocalStorage/My-Index.html)
+- 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/LocalStorage-5b1ffee914724d3a927785c0f0e430c7)
+
+---
