@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mouse Shadow</title>
+</head>
+<body>
+
+	<div class="hero">
+		<h1 contenteditable>🔥WOAH!</h1>
+	</div>
+
+	<style>
+		html {
+			color: black;
+			font-family: sans-serif;
+		}
+
+		body {
+			margin : 0;
+		}
+
+		.hero {
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: black;
+		}
+
+		h1 {
+			text-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+			font-size: 100px;
+		}
+	</style>
+
+	<script>
+		const h1 = document.querySelector("h1");
+		let baseX = h1.offsetLeft + parseInt(h1.offsetWidth / 2);
+		let baseY = h1.offsetTop + parseInt(h1.offsetHeight / 2);
+		
+		function mouseMoveHandler(e) {
+			const clientX = e.clientX, clientY = e.clientY;
+			const distanceX = parseInt(clientX - baseX);
+			const distanceY = parseInt(clientY - baseY);
+			h1.style.textShadow = `
+				${distanceX}px ${distanceY}px 0px rgba(255,0,255,0.7),
+				${-distanceX}px ${distanceY}px 0px rgba(0,255,255,0.7),
+				${distanceY}px ${-distanceX}px 0px rgba(0,255,0,0.7),
+				${-distanceY}px ${distanceX}px 0px rgba(0,0,255,0.7)
+			`;
+		}
+		function changeBasePosition() {
+			baseX = h1.offsetLeft + parseInt(h1.offsetWidth / 2);
+			baseY = h1.offsetTop + parseInt(h1.offsetHeight / 2);
+		}
+		window.addEventListener('mousemove', mouseMoveHandler);
+		window.addEventListener('resize', changeBasePosition);
+		
+	</script>
+</body>
+</html>
