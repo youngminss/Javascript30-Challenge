@@ -261,3 +261,19 @@
 - 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/LocalStorage-5b1ffee914724d3a927785c0f0e430c7)
 
 ---
+
+#### 🔴Day 16 - Mouse Move Shadow
+
+**알게된 것**
+
+- HTML, contenteditable 속성
+- DOM, resize 이벤트
+- DOM, Element.offsetLeft, Element.offsetTop
+- DOM, Element.offsetWidth, Element.offsetHeight
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/16%20-%20Mouse%20Move%20Shadow/My-Index.html)
+- 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Mouse-Move-Shadow-e2156a39fe8643fc820889770edc0f86)
+
+---
