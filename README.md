@@ -277,3 +277,17 @@
 - 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Mouse-Move-Shadow-e2156a39fe8643fc820889770edc0f86)
 
 ---
+
+#### 🔴Day 17 - Sort Without Articles
+
+**알게된 것**
+
+- map 함수로 요소를 생성하는 것에, 구분자는 default 로 ','를 내장함
+  - 고로, join('')를 통해, 생성되는 요소들간에 , 구분자를 공백으로 처리하도록 한다.
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/17%20-%20Sort%20Without%20Articles/My-Index.html)
+- 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Sorting-Band-Names-without-articles-b10aa083f4db413db01600111338f3da)
+
+---
