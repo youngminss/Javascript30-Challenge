@@ -291,3 +291,19 @@
 - 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Sorting-Band-Names-without-articles-b10aa083f4db413db01600111338f3da)
 
 ---
+
+#### 🔴Day 18 - Adding Up Times with Reduce
+
+**알게된 것**
+
+- JS, Array 타입으로 변환
+  - Array.from(데이터)
+  - [...데이터]
+- JS, parseInt, parseFloat 같은 함수를 map함수의 콜백함수로 넘김
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/18%20-%20Adding%20Up%20Times%20with%20Reduce/My-Index.html)
+- 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Tally-String-Times-with-Reduce-b0f71af3bf62401c9d89654dbe17f2c9)
+
+---
