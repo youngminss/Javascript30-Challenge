@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Speech Detection</title>
+</head>
+<body>
+	
+	<div class='words' contenteditable>
+
+	</div>
+
+<script>
+	// 글로벌 오브젝트에 window.SpeechRecongnition 일수도 있고, chrome 의 window.webkitSpeechRecognition 일 수도 있나 봄
+	window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+	
+	const recognition = new SpeechRecognition();	// SpeechRecognition 인스턴스 생성
+	recognition.interimResults = true;	// 중간 결과물 허용
+	// recognition.lang = 'en-US';			// 번역 결과 지원 언어설정
+	
+	let p = document.createElement('p');
+	const words = document.querySelector('.words');
+	words.appendChild(p);
+
+	// result, 중간중간 결과물 이벤트
+	recognition.addEventListener('result', e => {
+		const transcript = Array.from(e.results)
+			.map(result => result[0])
+			.map(result => result.transcript)
+			.join('');
+
+		console.log(transcript);
+
+		//	필터링 과정( 필수 X )
+		const poopScript = transcript.replace(/poop|poo|shit|dump/gi, '💩');
+		p.textContent = poopScript;
+
+		// isFinal => result 객체 내부에 마지막 문장인지 정보가 있음
+		if(e.results[0].isFinal) {
+			p = document.createElement('p');
+			words.appendChild(p);
+		};
+
+	})
+
+	recognition.addEventListener('end', recognition.start);	// end 이벤트, 한 문장이 끝났을 경우
+	recognition.start();	// chrome 마이크 on 
+
+</script>
+
+	<style>
+		html {
+			font-size: 10px;
+		}
+
+		body {
+			background: #ffc600;
+			font-family: 'helvetica neue';
+			font-weight: 200;
+			font-size: 20px;
+		}
+
+		.words {
+			max-width: 500px;
+			margin: 50px auto;
+			background: white;
+			border-radius: 5px;
+			box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+			padding : 1rem, 2rem 1rem 5rem;
+			background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+			background-size: 100% 3rem;
+			position: relative;
+			line-height: 3rem;
+		}
+
+		p {
+			margin: 0 0 3rem;
+		}
+
+		.words:before {
+			content: '';
+			position: absolute;
+			width: 4px;
+			top: 0;
+			left: 30px;
+			bottom: 0;
+			border: 1px solid;
+			border-color: transparent #efe4e4;
+		}
+	</style>
+</body>
+</html>
