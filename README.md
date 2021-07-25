@@ -307,3 +307,16 @@
 - 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Tally-String-Times-with-Reduce-b0f71af3bf62401c9d89654dbe17f2c9)
 
 ---
+
+#### 🔴Day 20 - Speech Detection
+
+**알게된 것**
+
+- DOM, SpeechRecognition Web APIs
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/20%20-%20Speech%20Detection/My-Index.html)
+- 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Speech-Detection-6c05c248725543e483050386b46f1440)
+
+---
