@@ -320,3 +320,17 @@
 - 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Speech-Detection-6c05c248725543e483050386b46f1440)
 
 ---
+
+#### 🔴Day 21 - Geolocation
+
+**알게된 것**
+
+- DOM, Navigator 객체
+- DOM, Navigator.geolocation 속성
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/21%20-%20Geolocation/My-Index.html)
+- 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Geolocation-Based-Speedometer-And-Compass-f908c7e1371e42ed8309f175a1277ec9)
+
+---
