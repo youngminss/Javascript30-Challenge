@@ -45,11 +45,18 @@
 			const highlight = document.querySelector('.highlight');
 			const myRect = this.getBoundingClientRect();
 			
-			console.log(myRect);
+			const coords = {
+				width: myRect.width,
+				height: myRect.height,
+				top: myRect.top ,
+				left: myRect.left
+			};
+
+			// console.log(coords);
 			highlight.setAttribute('style', `
-				width: ${myRect.width.toFixed(3)}px;
-				height: ${myRect.height.toFixed(3)}px;
-				transform: translate(${myRect.x.toFixed(3)}px, ${myRect.y.toFixed(3)}px);
+				width: ${coords.width.toFixed(3)}px;
+				height: ${coords.height.toFixed(3)}px;
+				transform: translate(${coords.left.toFixed(3)}px, ${coords.top.toFixed(3)}px);
 			`)
 			
 		}

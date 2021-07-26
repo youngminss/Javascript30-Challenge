@@ -334,3 +334,19 @@
 - 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Geolocation-Based-Speedometer-And-Compass-f908c7e1371e42ed8309f175a1277ec9)
 
 ---
+
+#### 🔴Day 22 - Follow Along Link Highlight
+
+**알게된 것**
+
+- DOM, mouseenter Event
+- JS, element.appendChild , element.innerHTML 차이
+- JS, element.getBoundingClientRect()
+- JS, element.setAttribute(속성, 속성값)
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/22%20-%20Follow%20Along%20Link%20Highlighter/My-Index.html)
+- 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Follow-Along-Links-e9acfbbd9a714f0c9cb56546326c971e)
+
+---
