@@ -350,3 +350,18 @@
 - 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Follow-Along-Links-e9acfbbd9a714f0c9cb56546326c971e)
 
 ---
+
+#### 🔴Day 23 - Speech Synthesis
+
+**알게된 것**
+
+- HTML, select - option 태그 시맨틱
+- DOM, Web API -> window.SpeechSynthesis , SpeechSynthesisUtterance 인스턴스
+- JS, element 속성-값 으로 querySelector 로 DOM 가져오기
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/23%20-%20Speech%20Synthesis/My-Index.html)
+- 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Speeach-Synthesis-5977f10d6ec14e17be4dff449cc98028)
+
+---

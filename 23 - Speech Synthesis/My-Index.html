@@ -30,7 +30,6 @@
 	</div>
 
 <script>
-	const synth = window.SpeechSynthesis;
 	const msg = new SpeechSynthesisUtterance('Hello!! I love JavaScript 💪');
 	let voices = [];
 	const voicesDropdown = document.querySelector('[name="voice"]');
@@ -38,11 +37,28 @@
 	const speakButton = document.querySelector("#speak");
 	const stopButton = document.querySelector("#stop");
 
+
+	function populateVoices() {
+		voices = this.getVoices();
+		voicesDropdown.innerHTML = voices
+			.filter(voice => voice.lang.includes('en'))
+			.map(voice => `<option value="${voice.name}">${voice.name} (${voice.lang})</option>`)
+			.join('');
+	}
+
+	function setVoice() {
+		msg.voice = voices.find(voice => voice.name === this.value);
+		toggle();
+	}
+
 	function optionChangeHandler(e) {
 		console.log(this.name, this.value);
 		msg.text = this.name === 'text' ? this.value : msg.text;
 		msg.pitch = this.name === 'pitch' ? this.value : msg.pitch;
 		msg.rate = this.name === 'rate' ? this.value : msg.rate;
+
+		// < Wes 형 방식 > 👍
+		// msg[this.name] = this.value;
 
 		toggle();
 	}
@@ -54,6 +70,9 @@
 		}
 	}
 
+	// 지원 언어 설정부분 
+	window.speechSynthesis.addEventListener('voiceschanged', populateVoices);
+	voicesDropdown.addEventListener('change', setVoice);
 
 	options.forEach(option => { option.addEventListener("change", optionChangeHandler) });
 	speakButton.addEventListener('click', toggle);
