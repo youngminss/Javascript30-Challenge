@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Speech Synthesis</title>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="myStyle.css">
+</head>
+<body>
+	
+	<div class="voiceinator">
+
+		<h1>The Voiceinator 5000</h1>
+
+		<select name="voice" id="voices">
+			<option value="">Select A Voice</option>
+		</select>
+
+		<lable for="rate">Rate:</lable>
+		<input name="rate" type="range" min="0" max="3" value="1" step="0.1">
+
+		<label for="pitch">Pitch:</label>
+		<input name="pitch" type="range" min="0" max="2" step="0.1">
+		
+		<textarea name="text">Hello! I love JavaScript 💪</textarea>
+
+		<button id="stop">Stop!</button>
+		<button id="speak">Speak</button>
+	</div>
+
+<script>
+	const synth = window.SpeechSynthesis;
+	const msg = new SpeechSynthesisUtterance('Hello!! I love JavaScript 💪');
+	let voices = [];
+	const voicesDropdown = document.querySelector('[name="voice"]');
+	const options = document.querySelectorAll('[type="range"], [name="text"]');
+	const speakButton = document.querySelector("#speak");
+	const stopButton = document.querySelector("#stop");
+
+	function optionChangeHandler(e) {
+		console.log(this.name, this.value);
+		msg.text = this.name === 'text' ? this.value : msg.text;
+		msg.pitch = this.name === 'pitch' ? this.value : msg.pitch;
+		msg.rate = this.name === 'rate' ? this.value : msg.rate;
+
+		toggle();
+	}
+
+	function toggle(startOver=true) {
+		window.speechSynthesis.cancel();
+		if(startOver) {
+			window.speechSynthesis.speak(msg);
+		}
+	}
+
+
+	options.forEach(option => { option.addEventListener("change", optionChangeHandler) });
+	speakButton.addEventListener('click', toggle);
+	stopButton.addEventListener('click', () => toggle(false))
+
+
+</script>
+</body>
+</html>
