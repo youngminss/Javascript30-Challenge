@@ -365,3 +365,21 @@
 - 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Speeach-Synthesis-5977f10d6ec14e17be4dff449cc98028)
 
 ---
+
+#### 🔴Day 24 - Sticky Nav
+
+**알게된 것**
+
+- HTML, a 태그, header 태그, nav 태크 시맨틱
+- CSS, 가상클래스- :before,:after
+- CSS, text-align:justify
+- CSS, text-transform
+- JS, element className 추가,삭제 여러가지 방법
+- JS, element 절대좌표, 상대좌표
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/24%20-%20Sticky%20Nav/My-Index.html)
+- 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Sticky-Nav-c208bd6b68b3448591ab19ab374fa9b4)
+
+---
