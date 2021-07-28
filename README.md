@@ -383,3 +383,21 @@
 - 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Sticky-Nav-c208bd6b68b3448591ab19ab374fa9b4)
 
 ---
+
+#### 🔴Day 25 - Event detection processing
+
+**알게된 것**
+
+- DOM, Event Bubbling
+- DOM, Event Capturing
+- DOM, Event Propagation
+- DOM, Event stopPropagation
+- DOM, Event Delegation
+- DOM, Event once
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/25%20-%20Event%20Capture%2C%20Propagation%2C%20Bubbling%20and%20Once/My-Index.html)
+- 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Event-Capture-Propagation-Bubbling-And-Once-b70059143ad64713ba73fe81713d126a)
+
+---
