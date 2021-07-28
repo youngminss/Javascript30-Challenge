@@ -401,3 +401,18 @@
 - 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Event-Capture-Propagation-Bubbling-And-Once-b70059143ad64713ba73fe81713d126a)
 
 ---
+
+#### 🔴Day 26 - Stripe Follow Along Dropdown
+
+**알게된 것**
+
+- CSS, will-change
+- CSS, 자식 결합자
+- JS, 시간차, className 추가로 CSS 효과 부드럽게 적용시키기
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/26%20-%20Stripe%20Follow%20Along%20Nav/My-Index.html)
+- 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Stripe-Follow-Along-Dropdown-cc357d4d428046e7ae49c908e430cb21)
+
+---
