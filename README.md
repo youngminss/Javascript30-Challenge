@@ -433,3 +433,12 @@
 - 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Click-And-Drag-8306fbc43fc9443cac77c067e5015552)
 
 ---
+
+#### 🔴Day 28 - Video Speed Controller
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/28%20-%20Video%20Speed%20Controller/My-Index.html)
+- 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Video-Speed-Controller-07a7b453dd1143309d952959d92dcc0e)
+
+---
