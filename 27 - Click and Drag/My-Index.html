@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Click and Drag</title>
+	<link rel="stylesheet" href="MyStyle.css">
+</head>
+<body>
+	<div class="items">
+		<div class="item item1">01</div>
+		<div class="item item2">02</div>
+		<div class="item item3">03</div>
+		<div class="item item4">04</div>
+		<div class="item item5">05</div>
+		<div class="item item6">06</div>
+		<div class="item item7">07</div>
+		<div class="item item8">08</div>
+		<div class="item item9">09</div>
+		<div class="item item10">10</div>
+		<div class="item item11">11</div>
+		<div class="item item12">12</div>
+		<div class="item item13">13</div>
+		<div class="item item14">14</div>
+		<div class="item item15">15</div>
+		<div class="item item16">16</div>
+		<div class="item item17">17</div>
+		<div class="item item18">18</div>
+		<div class="item item19">19</div>
+		<div class="item item20">20</div>
+		<div class="item item21">21</div>
+		<div class="item item22">22</div>
+		<div class="item item23">23</div>
+		<div class="item item24">24</div>
+		<div class="item item25">25</div>
+	</div>
+	
+<script>
+	const items = document.querySelector('.items');
+	let activateMouseClick = false;
+	let standardX;
+
+	function mousedownHandler(event) {
+		// console.log("마우스 클릭 중");
+		this.classList.add('active');
+		activateMouseClick = true;
+		standardX = event.x;
+	}
+	function mouseUpHandler(event) {
+		// console.log("마우스 클릭 땜");
+		this.classList.remove('active');
+		activateMouseClick = false;
+	}
+	function mouseLeaveHandler(event) {
+		// console.log("마우스 영역 떠남");
+		this.classList.remove('active');
+		activateMouseClick = false;
+	}
+	function mouseMoveHandler(event) {
+		if(!activateMouseClick) return;
+		console.log(standardX - event.x);
+		items.scrollLeft += (standardX - event.x);
+		// console.log(items.scrollLeft);
+	}
+
+	items.addEventListener('mousedown', mousedownHandler);
+	items.addEventListener('mouseup', mouseUpHandler);
+	items.addEventListener('mouseleave', mouseLeaveHandler);
+	items.addEventListener('mousemove',mouseMoveHandler);
+
+	// Wes 형 좌표 구하는 법
+	// e.pageX 와 items.offsetLeft 로 새로 이동한 거리정도 x 를 구하고
+	// x - 처음 클릭시 기준 x 로 전체 이동해야할 거리 walk 를 구함
+	// 최종적으로 새로운 slider.scrollLeft = 이전까지 slider.scrollLeft - walk 
+	
+	// < 클릭시 -> 기준점(startX), 클릭시점 sliderLeft 구해놓기 >
+	// slider.addEventListener('mousedown', (e) => {
+	// 	isDown = true;
+	// 	slider.classList.add('active');
+	// 	startX = e.pageX - slider.offsetLeft;
+	// 	scrollLeft = slider.scrollLeft;
+	// });
+
+	// < 클릭 상태에서 drag 시 -> 이동한 점의 위치?(x) 와 그로인한 이동한 거리(walk), 최종적으로 현재 slider.scrollLeft 업데이트 >
+	// slider.addEventListener('mousemove', (e) => {
+	// 	if (!isDown) return;  // stop the fn from running
+	// 	e.preventDefault();
+	// 	const x = e.pageX - slider.offsetLeft;
+	// 	const walk = (x - startX) * 3;
+	// 	slider.scrollLeft = scrollLeft - walk;
+	// });
+</script>
+</body>
+</html>
