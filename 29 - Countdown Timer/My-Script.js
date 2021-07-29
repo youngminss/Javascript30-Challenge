@@ -52,3 +52,12 @@ timeControlButtons.forEach((button) => {
   button.addEventListener("click", setButtonTimer);
 });
 customTimeInputForm.addEventListener("submit", setCustomTimer);
+
+// element 의 이름을 알고 있으면, document.element이름 으로 직접 접근이 가능하다고 함
+// document.customForm.addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   const mins = this.minutes.value;
+//   console.log(mins);
+//   timer(mins * 60);
+//   this.reset();
+// });

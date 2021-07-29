@@ -442,3 +442,19 @@
 - 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Video-Speed-Controller-07a7b453dd1143309d952959d92dcc0e)
 
 ---
+
+#### 🔴Day 29 - Countdown Timer
+
+**알게된 것**
+
+- JS, document.title
+- JS, clearInterval
+- JS, document.elementName 으로 DOM 접근
+- JS, form 태그 reset() 으로 value 초기화
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/29%20-%20Countdown%20Timer/My-Script.js)
+- 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/CountDown-Timer-9fd4b3427d344bab9ab80b9d8e02f9d0)
+
+---
