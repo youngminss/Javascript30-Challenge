@@ -22,10 +22,12 @@
 	const speedBar = document.querySelector('.speed-bar');
 	
 	function speedController(e) {
-	
-		const percent = Math.floor(e.offsetY / this.offsetHeight * 100);
 		const max = 4;
 		const min = 0.4;
+
+		const percent = Math.floor(e.offsetY / this.offsetHeight * 100);
+		// < Wes 형이 구한 현재 마우스가 올려져있는 y 위치
+		// const y = e.pageY - this.offsetTop;
 		const newRate = (percent / 100) * (max - min) + min;	// 마지막 min(0.4)는 최소 재생속도 offset
 		// < Wes 형이 구한 video PlaybackRate >
 		// video 가 최소 재생 속도가 존재하더라 -> 0.04
