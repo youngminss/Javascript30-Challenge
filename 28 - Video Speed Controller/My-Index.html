@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Video Speed Scrubber</title>
+	<link rel="stylesheet" href="MyStyle.css">
+</head>
+<body>
+	
+	<div class="wrapper">
+		<video class="flex" width="765" heigth="430" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" loop controls></video>
+		<div class="speed">
+			<div class="speed-bar">1x</div>
+		</div>
+	</div>
+
+<script>
+	const video = document.querySelector('.flex');
+	const speedBox = document.querySelector('.speed');
+	const speedBar = document.querySelector('.speed-bar');
+	
+	function speedController(e) {
+	
+		const percent = Math.floor(e.offsetY / this.offsetHeight * 100);
+		const max = 4;
+		const min = 0.4;
+		const newRate = (percent / 100) * (max - min) + min;	// 마지막 min(0.4)는 최소 재생속도 offset
+		// < Wes 형이 구한 video PlaybackRate >
+		// video 가 최소 재생 속도가 존재하더라 -> 0.04
+		// const playbackRate = percent * (max - min) + min;
+		
+		speedBar.style.height = `${percent}%`;
+		speedBar.textContent = `${newRate.toFixed(2)}x`;
+		video.playbackRate = newRate;
+	}
+	speedBox.addEventListener('mousemove', speedController)
+</script>
+</body>
+</html>
