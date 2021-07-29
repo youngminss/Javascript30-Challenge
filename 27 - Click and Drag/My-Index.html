@@ -40,12 +40,16 @@
 	const items = document.querySelector('.items');
 	let activateMouseClick = false;
 	let standardX;
+	let scrollLeft;		// 내가 생각 못한 것 ✅
 
 	function mousedownHandler(event) {
 		// console.log("마우스 클릭 중");
 		this.classList.add('active');
 		activateMouseClick = true;
 		standardX = event.x;
+
+		// standardX = event.x - items.offsetLeft;	// 내가 생각 못한 것 ✅
+		// scrollLeft = items.scrollLeft;	// 내가 생각 못한 것 ✅
 	}
 	function mouseUpHandler(event) {
 		// console.log("마우스 클릭 땜");
@@ -59,9 +63,12 @@
 	}
 	function mouseMoveHandler(event) {
 		if(!activateMouseClick) return;
-		console.log(standardX - event.x);
 		items.scrollLeft += (standardX - event.x);
-		// console.log(items.scrollLeft);
+		
+		// const x = event.x - items.offsetLeft;	// 내가 생각 못한 것 ✅
+		// const walk = (standardX - x) * 2;	// 내가 생각 못한 것 ✅
+		// items.scrollLeft = scrollLeft + walk;	// 내가 생각 못한 것 ✅
+
 	}
 
 	items.addEventListener('mousedown', mousedownHandler);

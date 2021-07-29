@@ -416,3 +416,20 @@
 - 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Stripe-Follow-Along-Dropdown-cc357d4d428046e7ae49c908e430cb21)
 
 ---
+
+#### 🔴Day 27 - Click And Drag
+
+**알게된 것**
+
+- CSS, white-space
+- CSS, user-select
+- CSS, display: inline-flex
+- JS, mouse event
+- JS, 가로스크롤, mouse drag distance 구하기
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/27%20-%20Click%20and%20Drag/My-Index.html)
+- 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Click-And-Drag-8306fbc43fc9443cac77c067e5015552)
+
+---
