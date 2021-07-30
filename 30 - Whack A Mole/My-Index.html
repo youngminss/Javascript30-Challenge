@@ -41,7 +41,11 @@
 	let attemptCount;
 	let hittingCount;
 
-	console.log(holes);
+
+	function randomTime(min, max) {
+		return Math.floor(Math.random() * (max - min) + min);
+	}
+	
 	function startGame(e) {
 		console.log("게임 시작 !");
 		attemptCount = 0;
@@ -49,10 +53,12 @@
 
 		let ramdomHole = setInterval(function () {
 			const ramdomIdx = Math.floor((Math.random() * 6)) + 1;
+			
 			holes[ramdomIdx-1].classList.toggle('up');
+			const time = randomTime(200, 1000);
 			setTimeout(() => {
 				holes[ramdomIdx - 1].classList.toggle('up');
-			},500)
+			}, time)
 
 			attemptCount++;
 			if(attemptCount > 10) {

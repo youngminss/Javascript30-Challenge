@@ -458,3 +458,18 @@
 - 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/CountDown-Timer-9fd4b3427d344bab9ab80b9d8e02f9d0)
 
 ---
+
+#### 🔴Day 30 - Whack a Mole
+
+**알게된 것**
+
+- CSS, flex-wrap
+- JS, 원하는 범위의 난수생성
+- JS, (setTimeout, setInterval) 로, 특정시간동안 동일한 작업반복수행 하는법 말고, (setTimeout, 재귀함수), flag 로 작업하는 방식
+
+**소스코드 & 구현노트**
+
+- 소스코드 : [Click To View](https://github.com/youngminss/Javascript30-Challenge/blob/main/30%20-%20Whack%20A%20Mole/My-Index.html)
+- 구현노트 : [Click To View](https://handy-monarch-ce0.notion.site/Whack-a-Mole-0e1c51fc588e4cb3bde3810f88738bc8)
+
+---
